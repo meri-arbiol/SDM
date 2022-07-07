@@ -1,0 +1,370 @@
+@prefix : <http://localhost:7200/publications/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix wot: <http://xmlns.com/wot/0.1/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix onto: <http://localhost:7200/publications/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://localhost:7200/publications/> .
+
+<http://localhost:7200/publications/> rdf:type owl:Ontology ;
+                                       dc:description "New ontology description"@en ;
+                                       dc:title "SDM_Ontology"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/description
+dc:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+dc:title rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://localhost:7200/publications/cassign
+onto:cassign rdf:type owl:ObjectProperty ;
+             rdfs:domain onto:Chair ;
+             rdfs:range onto:Reviewer ;
+             rdfs:label "cassign"@en .
+
+
+###  http://localhost:7200/publications/cishandleBy
+onto:cishandleBy rdf:type owl:ObjectProperty ;
+                 rdfs:domain onto:Conference ;
+                 rdfs:range onto:Chair ;
+                 rdfs:label "cishandleBy"@en .
+
+
+###  http://localhost:7200/publications/crelatedTo
+onto:crelatedTo rdf:type owl:ObjectProperty ;
+                rdfs:domain onto:Conference ;
+                rdfs:range onto:Topic ;
+                rdfs:label "crelatedTo"@en .
+
+
+###  http://localhost:7200/publications/eassign
+onto:eassign rdf:type owl:ObjectProperty ;
+             rdfs:domain onto:Editor ;
+             rdfs:range onto:Reviewer ;
+             rdfs:label "eassign"@en .
+
+
+###  http://localhost:7200/publications/eispartOf
+onto:eispartOf rdf:type owl:ObjectProperty ;
+               rdfs:domain onto:Edition ;
+               rdfs:range onto:Conference ;
+               rdfs:label "eispartOf"@en .
+
+
+###  http://localhost:7200/publications/jishandleby
+onto:jishandleby rdf:type owl:ObjectProperty ;
+                 rdfs:domain onto:Journal ;
+                 rdfs:range onto:Editor ;
+                 rdfs:label "jishandleby"@en .
+
+
+###  http://localhost:7200/publications/jrelatedTo
+onto:jrelatedTo rdf:type owl:ObjectProperty ;
+                rdfs:domain onto:Journal ;
+                rdfs:range onto:Topic ;
+                rdfs:label "jrelatedTo"@en .
+
+
+###  http://localhost:7200/publications/prelatedTo
+onto:prelatedTo rdf:type owl:ObjectProperty ;
+                rdfs:domain onto:Paper ;
+                rdfs:range onto:Topic ;
+                rdfs:label "prelatedTo"@en .
+
+
+###  http://localhost:7200/publications/publishedOnE
+onto:publishedOnE rdf:type owl:ObjectProperty ;
+                  rdfs:domain onto:Paper ;
+                  rdfs:range onto:Edition ;
+                  rdfs:label "publishedOnE"@en .
+
+
+###  http://localhost:7200/publications/publishedOnV
+onto:publishedOnV rdf:type owl:ObjectProperty ;
+                  rdfs:domain onto:Paper ;
+                  rdfs:range onto:Volume ;
+                  rdfs:label "publishedOnV"@en .
+
+
+###  http://localhost:7200/publications/reviewedBy
+onto:reviewedBy rdf:type owl:ObjectProperty ;
+                rdfs:domain onto:Paper ;
+                rdfs:range onto:Reviewer ;
+                rdfs:label "reviewedBy"@en .
+
+
+###  http://localhost:7200/publications/vispartOf
+onto:vispartOf rdf:type owl:ObjectProperty ;
+               rdfs:domain onto:Volume ;
+               rdfs:range onto:Journal ;
+               rdfs:label "vispartOf"@en .
+
+
+###  http://localhost:7200/publications/writes
+onto:writes rdf:type owl:ObjectProperty ;
+            rdfs:domain onto:Reviewer ;
+            rdfs:range onto:Review ;
+            rdfs:label "writes"@en .
+
+
+###  http://localhost:7200/publications/writtenBy
+onto:writtenBy rdf:type owl:ObjectProperty ;
+               rdfs:domain onto:Paper ;
+               rdfs:range onto:Author ;
+               rdfs:label "writtenBy"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://localhost:7200/publications/abstractIs
+onto:abstractIs rdf:type owl:DatatypeProperty ;
+                rdfs:domain onto:Paper ;
+                rdfs:range rdfs:Literal ;
+                rdfs:label "abstractIs"@en .
+
+
+###  http://localhost:7200/publications/ehasaCity
+onto:ehasaCity rdf:type owl:DatatypeProperty ;
+               rdfs:domain onto:Edition ;
+               rdfs:range rdfs:Literal ;
+               rdfs:label "ehasaCity"@en .
+
+
+###  http://localhost:7200/publications/ehasaName
+onto:ehasaName rdf:type owl:DatatypeProperty ;
+               rdfs:domain onto:Edition ;
+               rdfs:range rdfs:Literal ;
+               rdfs:label "ehasaName"@en .
+
+
+###  http://localhost:7200/publications/ehasaYear
+onto:ehasaYear rdf:type owl:DatatypeProperty ;
+               rdfs:domain onto:Edition ;
+               rdfs:range rdfs:Literal ;
+               rdfs:label "ehasaYear"@en .
+
+
+###  http://localhost:7200/publications/hasaDecision
+onto:hasaDecision rdf:type owl:DatatypeProperty ;
+                  rdfs:domain onto:Review ;
+                  rdfs:range rdfs:Literal ;
+                  rdfs:label "hasaDecision"@en .
+
+
+###  http://localhost:7200/publications/hasaName
+onto:hasaName rdf:type owl:DatatypeProperty ;
+              rdfs:domain onto:Paper ;
+              rdfs:range rdfs:Literal ;
+              rdfs:label "hasaName"@en .
+
+
+###  http://localhost:7200/publications/hasconferenceName
+onto:hasconferenceName rdf:type owl:DatatypeProperty ;
+                       rdfs:domain onto:Conference ;
+                       rdfs:range rdfs:Literal ;
+                       rdfs:label "hasconferenceName"@en .
+
+
+###  http://localhost:7200/publications/hasjournalName
+onto:hasjournalName rdf:type owl:DatatypeProperty ;
+                    rdfs:domain onto:Journal ;
+                    rdfs:range rdfs:Literal ;
+                    rdfs:label "hasjournalName"@en .
+
+
+###  http://localhost:7200/publications/personhasaName
+onto:personhasaName rdf:type owl:DatatypeProperty ;
+                    rdfs:domain onto:Person ;
+                    rdfs:range rdfs:Literal .
+
+
+###  http://localhost:7200/publications/rtextIs
+onto:rtextIs rdf:type owl:DatatypeProperty ;
+             rdfs:domain onto:Review ;
+             rdfs:range rdfs:Literal ;
+             rdfs:label "rtextIs"@en .
+
+
+###  http://localhost:7200/publications/thasName
+onto:thasName rdf:type owl:DatatypeProperty ;
+              rdfs:domain onto:Topic ;
+              rdfs:range rdfs:Literal ;
+              rdfs:label "thasName"@en .
+
+
+###  http://localhost:7200/publications/vhasaYear
+onto:vhasaYear rdf:type owl:DatatypeProperty ;
+               rdfs:domain onto:Volume ;
+               rdfs:range rdfs:Literal ;
+               rdfs:label "vhasaYear"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://localhost:7200/publications/Author
+onto:Author rdf:type owl:Class ;
+            rdfs:subClassOf onto:Person ;
+            rdfs:label "Author"@en .
+
+
+###  http://localhost:7200/publications/Chair
+onto:Chair rdf:type owl:Class ;
+           rdfs:subClassOf onto:Expert ;
+           owl:disjointWith onto:Editor ;
+           rdfs:label "Chair"@en .
+
+
+###  http://localhost:7200/publications/Conference
+onto:Conference rdf:type owl:Class ;
+                rdfs:subClassOf onto:Event ;
+                owl:disjointWith onto:Journal ;
+                rdfs:label "Conference"@en .
+
+
+###  http://localhost:7200/publications/Edition
+onto:Edition rdf:type owl:Class ;
+             rdfs:label "Edition"@en .
+
+
+###  http://localhost:7200/publications/Editor
+onto:Editor rdf:type owl:Class ;
+            rdfs:subClassOf onto:Expert ;
+            rdfs:label "Editor"@en .
+
+
+###  http://localhost:7200/publications/Event
+onto:Event rdf:type owl:Class ;
+           rdfs:label "Event"@en .
+
+
+###  http://localhost:7200/publications/Expert
+onto:Expert rdf:type owl:Class ;
+            rdfs:subClassOf onto:Person ;
+            rdfs:label "Expert"@en .
+
+
+###  http://localhost:7200/publications/Journal
+onto:Journal rdf:type owl:Class ;
+             rdfs:subClassOf onto:Event ;
+             rdfs:label "Journal"@en .
+
+
+###  http://localhost:7200/publications/Paper
+onto:Paper rdf:type owl:Class ;
+           rdfs:label "Paper"@en .
+
+
+###  http://localhost:7200/publications/Person
+onto:Person rdf:type owl:Class ;
+            rdfs:label "Person"@en .
+
+
+###  http://localhost:7200/publications/Review
+onto:Review rdf:type owl:Class ;
+            rdfs:label "Review"@en .
+
+
+###  http://localhost:7200/publications/Reviewer
+onto:Reviewer rdf:type owl:Class ;
+              rdfs:subClassOf onto:Person ;
+              rdfs:label "Reviewer"@en .
+
+
+###  http://localhost:7200/publications/Topic
+onto:Topic rdf:type owl:Class ;
+           rdfs:label "Topic"@en .
+
+
+###  http://localhost:7200/publications/Volume
+onto:Volume rdf:type owl:Class ;
+            rdfs:label "Volume"@en .
+
+
+###  http://localhost:7200/publications/demo_paper
+onto:demo_paper rdf:type owl:Class ;
+                rdfs:subClassOf onto:Paper .
+
+
+###  http://localhost:7200/publications/expert_groups
+onto:expert_groups rdf:type owl:Class ;
+                   rdfs:subClassOf onto:Conference .
+
+
+###  http://localhost:7200/publications/full_paper
+onto:full_paper rdf:type owl:Class ;
+                rdfs:subClassOf onto:Paper .
+
+
+###  http://localhost:7200/publications/journal_paper
+onto:journal_paper rdf:type owl:Class ;
+                   rdfs:subClassOf onto:Paper .
+
+
+###  http://localhost:7200/publications/poster
+onto:poster rdf:type owl:Class ;
+            rdfs:subClassOf onto:Paper .
+
+
+###  http://localhost:7200/publications/regular_conferences
+onto:regular_conferences rdf:type owl:Class ;
+                         rdfs:subClassOf onto:Conference .
+
+
+###  http://localhost:7200/publications/short_paper
+onto:short_paper rdf:type owl:Class ;
+                 rdfs:subClassOf onto:Paper .
+
+
+###  http://localhost:7200/publications/symposiums
+onto:symposiums rdf:type owl:Class ;
+                rdfs:subClassOf onto:Conference .
+
+
+###  http://localhost:7200/publications/workshops
+onto:workshops rdf:type owl:Class ;
+               rdfs:subClassOf onto:Conference .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( onto:demo_paper
+                onto:full_paper
+                onto:journal_paper
+                onto:poster
+                onto:short_paper
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( onto:expert_groups
+                onto:regular_conferences
+                onto:symposiums
+                onto:workshops
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

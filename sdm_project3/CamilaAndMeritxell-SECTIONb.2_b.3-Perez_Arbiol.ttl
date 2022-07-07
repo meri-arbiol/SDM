@@ -1,0 +1,720 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix onto: <http://localhost:7200/publications/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+onto: a owl:Ontology ;
+    dc:description "New ontology description"@en ;
+    dc:title "SDM_Ontology"@en .
+
+onto:abstractIs a owl:DatatypeProperty ;
+    rdfs:label "abstractIs"@en ;
+    rdfs:domain onto:Paper ;
+    rdfs:range rdfs:Literal .
+
+onto:cassign a owl:ObjectProperty ;
+    rdfs:label "cassign"@en ;
+    rdfs:domain onto:Chair ;
+    rdfs:range onto:Reviewer .
+
+onto:cishandleBy a owl:ObjectProperty ;
+    rdfs:label "cishandleBy"@en ;
+    rdfs:domain onto:Conference ;
+    rdfs:range onto:Chair .
+
+onto:crelatedTo a owl:ObjectProperty ;
+    rdfs:label "crelatedTo"@en ;
+    rdfs:domain onto:Conference ;
+    rdfs:range onto:Topic .
+
+onto:eassign a owl:ObjectProperty ;
+    rdfs:label "eassign"@en ;
+    rdfs:domain onto:Editor ;
+    rdfs:range onto:Reviewer .
+
+onto:ehasaCity a owl:DatatypeProperty ;
+    rdfs:label "ehasaCity"@en ;
+    rdfs:domain onto:Edition ;
+    rdfs:range rdfs:Literal .
+
+onto:ehasaName a owl:DatatypeProperty ;
+    rdfs:label "ehasaName"@en ;
+    rdfs:domain onto:Edition ;
+    rdfs:range rdfs:Literal .
+
+onto:ehasaYear a owl:DatatypeProperty ;
+    rdfs:label "ehasaYear"@en ;
+    rdfs:domain onto:Edition ;
+    rdfs:range rdfs:Literal .
+
+onto:eispartOf a owl:ObjectProperty ;
+    rdfs:label "eispartOf"@en ;
+    rdfs:domain onto:Edition ;
+    rdfs:range onto:Conference .
+
+onto:hasaDecision a owl:DatatypeProperty ;
+    rdfs:label "hasaDecision"@en ;
+    rdfs:domain onto:Review ;
+    rdfs:range rdfs:Literal .
+
+onto:hasaName a owl:DatatypeProperty ;
+    rdfs:label "hasaName"@en ;
+    rdfs:domain onto:Paper ;
+    rdfs:range rdfs:Literal .
+
+onto:hasconferenceName a owl:DatatypeProperty ;
+    rdfs:label "hasconferenceName"@en ;
+    rdfs:domain onto:Conference ;
+    rdfs:range rdfs:Literal .
+
+onto:hasjournalName a owl:DatatypeProperty ;
+    rdfs:label "hasjournalName"@en ;
+    rdfs:domain onto:Journal ;
+    rdfs:range rdfs:Literal .
+
+onto:jishandleby a owl:ObjectProperty ;
+    rdfs:label "jishandleby"@en ;
+    rdfs:domain onto:Journal ;
+    rdfs:range onto:Editor .
+
+onto:jrelatedTo a owl:ObjectProperty ;
+    rdfs:label "jrelatedTo"@en ;
+    rdfs:domain onto:Journal ;
+    rdfs:range onto:Topic .
+
+onto:paper_1 a onto:poster ;
+    onto:PublishenOnE onto:edition_E_2016 ;
+    onto:abstractIs onto:It_has_revolutionized_biomedical_research_and ;
+    onto:hasaName <http://localhost:7200/publications/An_Evaluation_of_Object-Oriented_DBMS_Developments:_1994_Edition.> ;
+    onto:relatedTo onto:topic_0,
+        onto:topic_3 ;
+    onto:reviewedBy onto:reviewer_8970890,
+        onto:reviewer_8970891,
+        onto:reviewer_8970901 ;
+    onto:writtenBy onto:author_8970880 .
+
+onto:paper_10 a onto:journal_paper ;
+    onto:abstractIs <http://localhost:7200/publications/Consider_an_Erdos-Renyi_random_graph_in_which_each_edge_is_present_independently_with_probability_1/2> ;
+    onto:hasaName <http://localhost:7200/publications/Object_Data_Model_Facilities_for_Multimedia_Data_Types.> ;
+    onto:publishedOnV onto:255.0 ;
+    onto:relatedTo onto:topic_0,
+        onto:topic_3 ;
+    onto:reviewedBy onto:reviewer_8970850,
+        onto:reviewer_8970900,
+        onto:reviewer_8970910 ;
+    onto:writtenBy onto:author_8970889 .
+
+onto:paper_2 a onto:short_paper ;
+    onto:PublishenOnE onto:edition_E_2017 ;
+    onto:abstractIs onto:Queuing_models_provide_insight_into_the_temporal_inhomogeneity_of_human_dynamics ;
+    onto:hasaName <http://localhost:7200/publications/DARWIN:_On_the_Incremental_Migration_of_Legacy_Information_Systems> ;
+    onto:relatedTo onto:topic_2,
+        onto:topic_3 ;
+    onto:reviewedBy onto:reviewer_8970889,
+        onto:reviewer_8970892,
+        onto:reviewer_8970902 ;
+    onto:writtenBy onto:author_8970881 .
+
+onto:paper_3 a onto:demo_paper ;
+    onto:PublishenOnE onto:edition_E_2018 ;
+    onto:abstractIs onto:The_approach_allows_to_study_alternative_splicing_patterns_for_individual_samples_and_can_also_be_the_basis_for_downstream_analyses._We_found_a_severalfold_improvement_in_estimation_mean_square_error_compared_popular_approaches_in_simulations ;
+    onto:hasaName onto:Integrating_Heterogeneous ;
+    onto:relatedTo onto:topic_0,
+        onto:topic_4 ;
+    onto:reviewedBy onto:reviewer_8970888,
+        onto:reviewer_8970893,
+        onto:reviewer_8970903 ;
+    onto:writtenBy onto:author_8970882 .
+
+onto:paper_4 a onto:poster ;
+    onto:PublishenOnE onto:edition_E_2018 ;
+    onto:abstractIs onto:We_introduced_and_studied_a_notion_of_algebraic_entropy._In_this_paper_we_will_give_an_application_of_algebraic_entropy_in_proving_Kunz_Regularity_Criterion_for_all_contracting_self-maps_of_finite_length_of_Noetherian_local_rings_in_arbitrary_characteristic._Some_conditions_of_Kunz_Criterion_have_already_been_extended_to_the_general_case_by_Avramov ;
+    onto:hasaName <http://localhost:7200/publications/Object_Model_Capabilities_For_Distributed_Object_Management.> ;
+    onto:relatedTo onto:topic_0,
+        onto:topic_3 ;
+    onto:reviewedBy onto:reviewer_8970887,
+        onto:reviewer_8970894 ;
+    onto:writtenBy onto:author_8970883 .
+
+onto:paper_5 a onto:full_paper ;
+    onto:PublishenOnE onto:edition_E_2016 ;
+    onto:abstractIs onto:Those_robots_must_collaborate_to_reach_a_sin-_gle_vertex_that_is_unknown_beforehand ;
+    onto:hasaName <http://localhost:7200/publications/Integrating_Object-Oriented_Applications_and_Middleware_with_Relational_Databases.> ;
+    onto:relatedTo onto:topic_3,
+        onto:topic_5 ;
+    onto:reviewedBy onto:reviewer_8970886,
+        onto:reviewer_8970895,
+        onto:reviewer_8970905 ;
+    onto:writtenBy onto:author_8970884 .
+
+onto:paper_6 a onto:journal_paper ;
+    onto:abstractIs onto:The_Fermilab_Linac_delivers_a_variable_intensity ;
+    onto:hasaName <http://localhost:7200/publications/Towards_a_Transaction_Management_System_for_DOM.> ;
+    onto:publishedOnV onto:210.0 ;
+    onto:relatedTo onto:topic_2,
+        onto:topic_3 ;
+    onto:reviewedBy onto:reviewer_8970800,
+        onto:reviewer_8970896,
+        onto:reviewer_8970906 ;
+    onto:writtenBy onto:author_8970885 .
+
+onto:paper_7 a onto:journal_paper ;
+    onto:abstractIs onto:Let_R_be_the_quotient_of_a_polynomial_ring_over_a_field_k_by_an_ideal_generated_by_monomials ;
+    onto:hasaName <http://localhost:7200/publications/A_RISC_Object_Model_for_Object_System_Interoperation:_Concepts_and_Applications.> ;
+    onto:publishedOnV onto:211.0 ;
+    onto:relatedTo onto:topic_0,
+        onto:topic_5 ;
+    onto:reviewedBy onto:reviewer_8970801,
+        onto:reviewer_8970897,
+        onto:reviewer_8970907 ;
+    onto:writtenBy onto:author_8970886 .
+
+onto:paper_8 a onto:journal_paper ;
+    onto:abstractIs onto:Discontinuity_preserving_smoothing_is_a_fundamentally_important_procedure_that_is_useful_in_a_wide_variety_of_image_processing_contexts ;
+    onto:hasaName <http://localhost:7200/publications/MetaObject_Protocol_Concepts_for_a_RISC_Object_Model.> ;
+    onto:publishedOnV onto:133.0 ;
+    onto:relatedTo onto:topic_0,
+        onto:topic_2 ;
+    onto:reviewedBy onto:reviewer_8970802,
+        onto:reviewer_8970898,
+        onto:reviewer_8970908 ;
+    onto:writtenBy onto:author_8970887 .
+
+onto:paper_9 a onto:journal_paper ;
+    onto:abstractIs <http://localhost:7200/publications/We_investigate_the_properties_of_the_Hybrid_Monte-Carlo_algorithm_HMC_in_high_dimensions._HMC_develops_a_Markov_chain_reversible_w.r.t._a_given_target_distribution_Pi_by_using_separable_Hamiltonian_dynamics_with_potential_-logPi._The_additional_momentum_variables_are_chosen_at_random_from_the_Boltzmann_distribution_and_the_continuous-time_Hamiltonian_dynamics_are_then_discretised_using_the_leapfrog_scheme._The_induced_bias_is_removed_via_a_Metropolis-Hastings_accept/reject_rule._In_the_simplified_scenario_of_independent> ;
+    onto:hasaName <http://localhost:7200/publications/Object_Data_Language_Facilities_for_Multimedia_Data_Types.> ;
+    onto:publishedOnV onto:89.0 ;
+    onto:relatedTo onto:topic_2,
+        onto:topic_4 ;
+    onto:reviewedBy onto:reviewer_8970804,
+        onto:reviewer_8970899,
+        onto:reviewer_8970909 ;
+    onto:writtenBy onto:author_8970888 .
+
+onto:personhasaName a owl:DatatypeProperty ;
+    rdfs:domain onto:Person ;
+    rdfs:range rdfs:Literal .
+
+onto:prelatedTo a owl:ObjectProperty ;
+    rdfs:label "prelatedTo"@en ;
+    rdfs:domain onto:Paper ;
+    rdfs:range onto:Topic .
+
+onto:publishedOnE a owl:ObjectProperty ;
+    rdfs:label "publishedOnE"@en ;
+    rdfs:domain onto:Paper ;
+    rdfs:range onto:Edition .
+
+onto:publishedOnV a owl:ObjectProperty ;
+    rdfs:label "publishedOnV"@en ;
+    rdfs:domain onto:Paper ;
+    rdfs:range onto:Volume .
+
+onto:reviewedBy a owl:ObjectProperty ;
+    rdfs:label "reviewedBy"@en ;
+    rdfs:domain onto:Paper ;
+    rdfs:range onto:Reviewer .
+
+onto:rtextIs a owl:DatatypeProperty ;
+    rdfs:label "rtextIs"@en ;
+    rdfs:domain onto:Review ;
+    rdfs:range rdfs:Literal .
+
+onto:thasName a owl:DatatypeProperty ;
+    rdfs:label "thasName"@en ;
+    rdfs:domain onto:Topic ;
+    rdfs:range rdfs:Literal .
+
+onto:vhasaYear a owl:DatatypeProperty ;
+    rdfs:label "vhasaYear"@en ;
+    rdfs:domain onto:Volume ;
+    rdfs:range rdfs:Literal .
+
+onto:vispartOf a owl:ObjectProperty ;
+    rdfs:label "vispartOf"@en ;
+    rdfs:domain onto:Volume ;
+    rdfs:range onto:Journal .
+
+onto:writes a owl:ObjectProperty ;
+    rdfs:label "writes"@en ;
+    rdfs:domain onto:Reviewer ;
+    rdfs:range onto:Review .
+
+onto:writtenBy a owl:ObjectProperty ;
+    rdfs:label "writtenBy"@en ;
+    rdfs:domain onto:Paper ;
+    rdfs:range onto:Author .
+
+dc:description a owl:AnnotationProperty .
+
+dc:title a owl:AnnotationProperty .
+
+onto:133.0 onto:vhasaYear onto:2012.0 ;
+    onto:vispartOf onto:journal_12003633.0 .
+
+onto:210.0 onto:vhasaYear onto:1999.0 ;
+    onto:vispartOf onto:journal_12003631.0 .
+
+onto:211.0 onto:vhasaYear onto:2000.0 ;
+    onto:vispartOf onto:journal_12003632.0 .
+
+onto:255.0 onto:vhasaYear onto:2000.0 ;
+    onto:vispartOf onto:journal_12003635.0 .
+
+onto:89.0 onto:vhasaYear onto:2015.0 ;
+    onto:vispartOf onto:journal_12003634.0 .
+
+onto:Author a owl:Class ;
+    rdfs:label "Author"@en ;
+    rdfs:subClassOf onto:Person .
+
+onto:author_8970880 onto:personhasaName onto:Michael_Schwarz .
+
+onto:author_8970881 onto:personhasaName onto:Yuval_Yarom .
+
+onto:author_8970882 onto:personhasaName onto:Frank_Manola .
+
+onto:author_8970883 onto:personhasaName onto:Michael_L._Brodie .
+
+onto:author_8970884 onto:personhasaName onto:Michael_Stonebraker .
+
+onto:author_8970885 onto:personhasaName onto:Mark_F._Hornick .
+
+onto:author_8970886 onto:personhasaName onto:Joe_D._Morrison .
+
+onto:author_8970887 onto:personhasaName onto:Farshad_Nayeri .
+
+onto:author_8970888 onto:personhasaName onto:Alejandro_P._Buchmann .
+
+onto:author_8970889 onto:personhasaName onto:M._Tamer_Ozsu .
+
+onto:chairs_1 onto:cassign onto:reviewer_8970890,
+        onto:reviewer_8970891,
+        onto:reviewer_8970901 ;
+    onto:personhasaName onto:Burkhard_Kehrbusch .
+
+onto:chairs_10 onto:cassign onto:reviewer_8970886,
+        onto:reviewer_8970895,
+        onto:reviewer_8970905 ;
+    onto:personhasaName onto:Mario_Corin .
+
+onto:chairs_2 onto:cassign onto:reviewer_8970890,
+        onto:reviewer_8970891,
+        onto:reviewer_8970901 ;
+    onto:personhasaName onto:Daniel_Genkin .
+
+onto:chairs_3 onto:cassign onto:reviewer_8970889,
+        onto:reviewer_8970892,
+        onto:reviewer_8970902 ;
+    onto:personhasaName onto:Moritz_Lipp .
+
+onto:chairs_4 onto:cassign onto:reviewer_8970889,
+        onto:reviewer_8970892,
+        onto:reviewer_8970902 ;
+    onto:personhasaName onto:Stefan_JSchierholz .
+
+onto:chairs_5 onto:cassign onto:reviewer_8970887,
+        onto:reviewer_8970888,
+        onto:reviewer_8970893,
+        onto:reviewer_8970894,
+        onto:reviewer_8970903 ;
+    onto:personhasaName onto:Manfred_Schmidt .
+
+onto:chairs_6 onto:cassign onto:reviewer_8970887,
+        onto:reviewer_8970888,
+        onto:reviewer_8970893,
+        onto:reviewer_8970894,
+        onto:reviewer_8970903 ;
+    onto:personhasaName onto:Rudi_Studer .
+
+onto:chairs_9 onto:cassign onto:reviewer_8970886,
+        onto:reviewer_8970895,
+        onto:reviewer_8970905 ;
+    onto:personhasaName onto:Carlos_Mora .
+
+onto:conference_6859291.0 a onto:workshops ;
+    onto:cishandleBy onto:chairs_1,
+        onto:chairs_10,
+        onto:chairs_2,
+        onto:chairs_9 ;
+    onto:crelatedTo onto:topic_0,
+        onto:topic_3,
+        onto:topic_5 ;
+    onto:hasconferenceName onto:Atlas_Convention .
+
+onto:conference_6859292.0 a onto:workshops ;
+    onto:cishandleBy onto:chairs_3,
+        onto:chairs_4 ;
+    onto:crelatedTo onto:topic_2,
+        onto:topic_3 ;
+    onto:hasconferenceName onto:Atlas_Convention .
+
+onto:conference_6859293.0 a onto:regular_conferences ;
+    onto:cishandleBy onto:chairs_5,
+        onto:chairs_6 ;
+    onto:crelatedTo onto:topic_0,
+        onto:topic_3,
+        onto:topic_4 ;
+    onto:hasconferenceName <http://localhost:7200/publications/China_International_Agrochemical_&_Crop_Protection_Exhibition> .
+
+onto:edition_E_2017 onto:ehasaCity onto:Delhi ;
+    onto:ehasaName <http://localhost:7200/publications/Graph_clustering_based_topic_modeling_using_feature_learning_approach.> ;
+    onto:ehasaYear onto:2017.0 ;
+    onto:eispartOf onto:conference_6859292.0 .
+
+onto:editor_1 onto:eassign onto:reviewer_8970800,
+        onto:reviewer_8970896,
+        onto:reviewer_8970906 ;
+    onto:personhasaName onto:Brigitte_Bartsc .
+
+onto:editor_10 onto:eassign onto:reviewer_8970850,
+        onto:reviewer_8970900,
+        onto:reviewer_8970910 ;
+    onto:personhasaName onto:Cammill_Say .
+
+onto:editor_2 onto:eassign onto:reviewer_8970800,
+        onto:reviewer_8970896,
+        onto:reviewer_8970906 ;
+    onto:personhasaName onto:Gisela_Scha .
+
+onto:editor_3 onto:eassign onto:reviewer_8970801,
+        onto:reviewer_8970897,
+        onto:reviewer_8970907 ;
+    onto:personhasaName onto:Phil_She .
+
+onto:editor_4 onto:eassign onto:reviewer_8970801,
+        onto:reviewer_8970897,
+        onto:reviewer_8970907 ;
+    onto:personhasaName onto:Daniel_Gru .
+
+onto:editor_5 onto:eassign onto:reviewer_8970802,
+        onto:reviewer_8970898,
+        onto:reviewer_8970908 ;
+    onto:personhasaName onto:Mike_Ham .
+
+onto:editor_6 onto:eassign onto:reviewer_8970802,
+        onto:reviewer_8970898,
+        onto:reviewer_8970908 ;
+    onto:personhasaName onto:Christoph_Beie .
+
+onto:editor_7 onto:eassign onto:reviewer_8970804,
+        onto:reviewer_8970899,
+        onto:reviewer_8970909 ;
+    onto:personhasaName onto:David_Bee .
+
+onto:editor_8 onto:eassign onto:reviewer_8970804,
+        onto:reviewer_8970899,
+        onto:reviewer_8970909 ;
+    onto:personhasaName onto:Toni_Bollinger .
+
+onto:editor_9 onto:eassign onto:reviewer_8970850,
+        onto:reviewer_8970900,
+        onto:reviewer_8970910 ;
+    onto:personhasaName onto:Louis_Beller .
+
+onto:expert_groups a owl:Class ;
+    rdfs:subClassOf onto:Conference .
+
+onto:journal_12003631.0 onto:hasjournalName onto:University_of_California_at_Berkeley ;
+    onto:jishandleby onto:editor_1,
+        onto:editor_2 ;
+    onto:jrelatedTo onto:topic_2,
+        onto:topic_3 .
+
+onto:journal_12003632.0 onto:hasjournalName onto:University_of_California_at_Berkeley ;
+    onto:jishandleby onto:editor_3,
+        onto:editor_4 ;
+    onto:jrelatedTo onto:topic_0,
+        onto:topic_5 .
+
+onto:journal_12003633.0 onto:hasjournalName onto:Digital_System_Research_Center_Report ;
+    onto:jishandleby onto:editor_5,
+        onto:editor_6 ;
+    onto:jrelatedTo onto:topic_0,
+        onto:topic_2 .
+
+onto:journal_12003634.0 onto:hasjournalName onto:Compulog_Newsletter ;
+    onto:jishandleby onto:editor_7,
+        onto:editor_8 ;
+    onto:jrelatedTo onto:topic_2,
+        onto:topic_4 .
+
+onto:journal_12003635.0 onto:hasjournalName onto:University_of_Harvard ;
+    onto:jishandleby onto:editor_10,
+        onto:editor_9 ;
+    onto:jrelatedTo onto:topic_0,
+        onto:topic_3 .
+
+onto:review_10 onto:hasaDecision onto:accepted ;
+    onto:rtextIs <http://localhost:7200/publications/Dolor_voluptatem_quiquia_aliquam.> .
+
+onto:review_11 onto:hasaDecision onto:accepted ;
+    onto:rtextIs <http://localhost:7200/publications/Dolor_magnam_quiquia_dolorem_voluptatem_quiquia_aliquam.> .
+
+onto:review_12 onto:hasaDecision onto:accepted ;
+    onto:rtextIs <http://localhost:7200/publications/Labore_dolorem_quisquam_sed_eius_eius_dolore_consectetur.> .
+
+onto:review_13 onto:hasaDecision onto:accepted ;
+    onto:rtextIs <http://localhost:7200/publications/Quisquam_quisquam_voluptatem_modi.> .
+
+onto:review_14 onto:hasaDecision onto:accepted ;
+    onto:rtextIs <http://localhost:7200/publications/Sed_eius_dolore_porro_quiquia_quaerat.> .
+
+onto:review_15 onto:hasaDecision onto:accepted ;
+    onto:rtextIs <http://localhost:7200/publications/Dolorem_sit_adipisci_modi_adipisci_dolore.> .
+
+onto:review_17 onto:hasaDecision onto:accepted ;
+    onto:rtextIs <http://localhost:7200/publications/Sit_labore_est_consectetur_non_numquam.> .
+
+onto:review_18 onto:hasaDecision onto:accepted ;
+    onto:rtextIs <http://localhost:7200/publications/Amet_labore_magnam_quiquia_dolorem_amet_eius_ut.> .
+
+onto:review_19 onto:hasaDecision onto:accepted ;
+    onto:rtextIs <http://localhost:7200/publications/Magnam_ipsum_eius_quaerat_quaerat_dolorem_ipsum.> .
+
+onto:review_20 onto:hasaDecision onto:accepted ;
+    onto:rtextIs <http://localhost:7200/publications/Tempora_consectetur_dolor_est_tempora_ut.> .
+
+onto:review_21 onto:hasaDecision onto:accepted ;
+    onto:rtextIs <http://localhost:7200/publications/Dolor_dolorem_ut_ipsum_dolore_labore_dolorem_dolore_tempora.> .
+
+onto:review_22 onto:hasaDecision onto:accepted ;
+    onto:rtextIs <http://localhost:7200/publications/Labore_dolorem_quisquam_sed_eius_eius_dolore_consectetur.> .
+
+onto:review_23 onto:hasaDecision onto:accepted ;
+    onto:rtextIs <http://localhost:7200/publications/Dolorem_dolorem_sed_quiquia_ut_quiquia.> .
+
+onto:review_24 onto:hasaDecision onto:accepted ;
+    onto:rtextIs <http://localhost:7200/publications/Modi_consectetur_ut_ipsum_consectetur_neque_sed_consectetur_velit.> .
+
+onto:review_25 onto:hasaDecision onto:accepted ;
+    onto:rtextIs <http://localhost:7200/publications/Dolore_eius_labore_porro_modi_sed_porro_neque.> .
+
+onto:review_26 onto:hasaDecision onto:accepted ;
+    onto:rtextIs <http://localhost:7200/publications/Quaerat_dolorem_sit_sed_voluptatem_amet.> .
+
+onto:review_27 onto:hasaDecision onto:accepted ;
+    onto:rtextIs <http://localhost:7200/publications/Sit_labore_est_consectetur_non_numquam.> .
+
+onto:review_28 onto:hasaDecision onto:accepted ;
+    onto:rtextIs <http://localhost:7200/publications/Etincidunt_sed_consectetur_modi_aliquam_velit_amet_aliquam.> .
+
+onto:review_29 onto:hasaDecision onto:accepted ;
+    onto:rtextIs <http://localhost:7200/publications/Quisquam_consectetur_porro_quisquam_ipsum.> .
+
+onto:review_3 onto:hasaDecision onto:accepted ;
+    onto:rtextIs <http://localhost:7200/publications/Quaerat_dolorem_ipsum.> .
+
+onto:review_30 onto:hasaDecision onto:accepted ;
+    onto:rtextIs <http://localhost:7200/publications/Quiquia_dolorem_quaerat_dolorem_voluptatem_sed_dolore_dolor_quaerat_modi.> .
+
+onto:review_31 onto:hasaDecision onto:rejected ;
+    onto:rtextIs <http://localhost:7200/publications/Quiquia_dolorem_quaerat.> .
+
+onto:review_4 onto:hasaDecision onto:accepted ;
+    onto:rtextIs <http://localhost:7200/publications/Magnam_quiquia_dolorem_amet_eius_ut.> .
+
+onto:review_5 onto:hasaDecision onto:accepted ;
+    onto:rtextIs <http://localhost:7200/publications/Magnam_quaerat_porro_aliquam_est_quisquam_amet_ipsum_quisquam_modi.> .
+
+onto:review_6 onto:hasaDecision onto:accepted ;
+    onto:rtextIs <http://localhost:7200/publications/Ymodi_sed_porro_neque.> .
+
+onto:review_7 onto:hasaDecision onto:accepted ;
+    onto:rtextIs <http://localhost:7200/publications/Consectetur_neque_sed_consectetur_velit.> .
+
+onto:review_8 onto:hasaDecision onto:accepted ;
+    onto:rtextIs <http://localhost:7200/publications/Numquam_non_consectetur_sit_labore_etincidunt.> .
+
+onto:review_9 onto:hasaDecision onto:accepted ;
+    onto:rtextIs <http://localhost:7200/publications/Dolorem_voluptatem_non_quisquam_quisquam_voluptatem_modi.> .
+
+onto:symposiums a owl:Class ;
+    rdfs:subClassOf onto:Conference .
+
+onto:Chair a owl:Class ;
+    rdfs:label "Chair"@en ;
+    rdfs:subClassOf onto:Expert ;
+    owl:disjointWith onto:Editor .
+
+onto:Event a owl:Class ;
+    rdfs:label "Event"@en .
+
+onto:Expert a owl:Class ;
+    rdfs:label "Expert"@en ;
+    rdfs:subClassOf onto:Person .
+
+onto:demo_paper a owl:Class ;
+    rdfs:subClassOf onto:Paper .
+
+onto:edition_E_2016 onto:ehasaCity onto:Tianjin ;
+    onto:ehasaName <http://localhost:7200/publications/Optimizing_Multi-hop_Queries_in_ZigBee_Based_Multi-sink_Sensor_Networks.> ;
+    onto:ehasaYear onto:2016.0 ;
+    onto:eispartOf onto:conference_6859291.0 .
+
+onto:edition_E_2018 onto:ehasaCity onto:Tokyo ;
+    onto:ehasaName <http://localhost:7200/publications/A_blockchain_based_incentive_scheme_for_post_disaster_opportunistic_communication_over_DTN.> ;
+    onto:ehasaYear onto:2018.0 ;
+    onto:eispartOf onto:conference_6859293.0 .
+
+onto:full_paper a owl:Class ;
+    rdfs:subClassOf onto:Paper .
+
+onto:regular_conferences a owl:Class ;
+    rdfs:subClassOf onto:Conference .
+
+onto:review_16 onto:hasaDecision onto:accepted ;
+    onto:rtextIs <http://localhost:7200/publications/Ut_porro_amet_modi_non_dolor_dolorem.> .
+
+onto:short_paper a owl:Class ;
+    rdfs:subClassOf onto:Paper .
+
+onto:Editor a owl:Class ;
+    rdfs:label "Editor"@en ;
+    rdfs:subClassOf onto:Expert .
+
+onto:Review a owl:Class ;
+    rdfs:label "Review"@en .
+
+onto:Volume a owl:Class ;
+    rdfs:label "Volume"@en .
+
+onto:poster a owl:Class ;
+    rdfs:subClassOf onto:Paper .
+
+onto:reviewer_8970800 onto:personhasaName onto:Mark_F._Hornick ;
+    onto:writes onto:review_26 .
+
+onto:reviewer_8970801 onto:personhasaName onto:Joe_D._Morrison ;
+    onto:writes onto:review_5 .
+
+onto:reviewer_8970802 onto:personhasaName onto:Farshad_Nayeri ;
+    onto:writes onto:review_28 .
+
+onto:reviewer_8970804 onto:personhasaName onto:Alejandro_P._Buchmann ;
+    onto:writes onto:review_29 .
+
+onto:reviewer_8970850 onto:personhasaName onto:M._Tamer_Ozsu ;
+    onto:writes onto:review_30 .
+
+onto:reviewer_8970886 onto:personhasaName onto:Michael_Stonebraker ;
+    onto:writes onto:review_25 .
+
+onto:reviewer_8970887 onto:personhasaName onto:Michael_L._Brodie ;
+    onto:writes onto:review_7 .
+
+onto:reviewer_8970888 onto:personhasaName onto:Frank_Manola ;
+    onto:writes onto:review_13 .
+
+onto:reviewer_8970889 onto:personhasaName onto:Yuval_Yarom ;
+    onto:writes onto:review_8 .
+
+onto:reviewer_8970890 onto:personhasaName onto:Michael_Schwarz ;
+    onto:writes onto:review_21 .
+
+onto:reviewer_8970891 onto:personhasaName onto:Michael_Schwarz ;
+    onto:writes onto:review_11 .
+
+onto:reviewer_8970892 onto:personhasaName onto:Yuval_Yarom ;
+    onto:writes onto:review_12 .
+
+onto:reviewer_8970893 onto:personhasaName onto:Frank_Manola ;
+    onto:writes onto:review_9 .
+
+onto:reviewer_8970894 onto:personhasaName onto:Michael_L._Brodie ;
+    onto:writes onto:review_14,
+        onto:review_24 .
+
+onto:reviewer_8970895 onto:personhasaName onto:Michael_Stonebraker ;
+    onto:writes onto:review_15 .
+
+onto:reviewer_8970896 onto:personhasaName onto:Mark_F._Hornick ;
+    onto:writes onto:review_16 .
+
+onto:reviewer_8970897 onto:personhasaName onto:Joe_D._Morrison ;
+    onto:writes onto:review_17 .
+
+onto:reviewer_8970898 onto:personhasaName onto:Farshad_Nayeri ;
+    onto:writes onto:review_18 .
+
+onto:reviewer_8970899 onto:personhasaName onto:Alejandro_P._Buchmann ;
+    onto:writes onto:review_19 .
+
+onto:reviewer_8970900 onto:personhasaName onto:M._Tamer_Ozsu ;
+    onto:writes onto:review_20 .
+
+onto:reviewer_8970901 onto:personhasaName onto:Michael_Schwarz ;
+    onto:writes onto:review_10 .
+
+onto:reviewer_8970902 onto:personhasaName onto:Yuval_Yarom ;
+    onto:writes onto:review_22 .
+
+onto:reviewer_8970903 onto:personhasaName onto:Frank_Manola ;
+    onto:writes onto:review_23 .
+
+onto:reviewer_8970905 onto:personhasaName onto:Michael_Stonebraker ;
+    onto:writes onto:review_6 .
+
+onto:reviewer_8970906 onto:personhasaName onto:Mark_F._Hornick ;
+    onto:writes onto:review_16 .
+
+onto:reviewer_8970907 onto:personhasaName onto:Joe_D._Morrison ;
+    onto:writes onto:review_27 .
+
+onto:reviewer_8970908 onto:personhasaName onto:Farshad_Nayeri ;
+    onto:writes onto:review_4 .
+
+onto:reviewer_8970909 onto:personhasaName onto:Alejandro_P._Buchmann ;
+    onto:writes onto:review_3 .
+
+onto:reviewer_8970910 onto:personhasaName onto:M._Tamer_Ozsu ;
+    onto:writes onto:review_31 .
+
+onto:workshops a owl:Class ;
+    rdfs:subClassOf onto:Conference .
+
+onto:Person a owl:Class ;
+    rdfs:label "Person"@en .
+
+onto:Reviewer a owl:Class ;
+    rdfs:label "Reviewer"@en ;
+    rdfs:subClassOf onto:Person .
+
+onto:Topic a owl:Class ;
+    rdfs:label "Topic"@en .
+
+onto:topic_4 onto:thasName onto:Data_Science .
+
+onto:topic_5 onto:thasName onto:Technology .
+
+onto:Edition a owl:Class ;
+    rdfs:label "Edition"@en .
+
+onto:Journal a owl:Class ;
+    rdfs:label "Journal"@en ;
+    rdfs:subClassOf onto:Event .
+
+onto:journal_paper a owl:Class ;
+    rdfs:subClassOf onto:Paper .
+
+onto:Conference a owl:Class ;
+    rdfs:label "Conference"@en ;
+    rdfs:subClassOf onto:Event ;
+    owl:disjointWith onto:Journal .
+
+onto:topic_2 onto:thasName onto:Physics .
+
+onto:topic_0 onto:thasName onto:Mathematics .
+
+onto:topic_3 onto:thasName onto:Economy .
+
+onto:Paper a owl:Class ;
+    rdfs:label "Paper"@en .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( onto:demo_paper onto:full_paper onto:journal_paper onto:poster onto:short_paper ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( onto:expert_groups onto:regular_conferences onto:symposiums onto:workshops ) .
+
